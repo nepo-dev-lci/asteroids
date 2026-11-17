@@ -12,10 +12,12 @@ public class Player : MonoBehaviour
     private float originalFireInterval;
     public float fireIntervalWhenBoosted = 0.25f;
     public float speedBoostDuration = 2f;
+    public float speedBoostCooldown = 5f;
     public float bulletSpeed = 8f;
 
     Timer fireTimer = new Timer();
     Timer speedBoostTimer = new Timer();
+    Timer speedBoostCooldownTimer = new Timer();
 
     SpriteRenderer sprite;
 
@@ -59,16 +61,26 @@ public class Player : MonoBehaviour
 
     void HandleSpeedBoostAbility()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && speedBoostCooldownTimer.IsFinished())
         {
             fireInterval = fireIntervalWhenBoosted;
             speedBoostTimer.Start(speedBoostDuration);
+            speedBoostCooldownTimer.Start(speedBoostCooldown);
             sprite.color = Color.red;
+            Fire();
+            fireTimer.Start(fireInterval);
         }
 
-        if (speedBoostTimer.IsFinished())
+        if (!speedBoostCooldownTimer.IsFinished())
         {
-            fireInterval = originalFireInterval;
+            if (speedBoostTimer.IsFinished())
+            {
+                fireInterval = originalFireInterval;
+                sprite.color = Color.blue;
+            }
+        }
+        else
+        {
             sprite.color = Color.white;
         }
     }

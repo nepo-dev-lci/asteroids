@@ -339,6 +339,9 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   bulletPrefab: {fileID: 8659395044095693862, guid: 3f5c3af85fa6d104b82e13b72c27571f, type: 3}
   fireInterval: 0.5
+  fireIntervalWhenBoosted: 0.25
+  speedBoostDuration: 2
+  speedBoostCooldown: 5
   bulletSpeed: 8
   progressBar: {fileID: 598514966}
 --- !u!1 &337382977
