@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     public float fireInterval = 0.5f;
     public float bulletSpeed = 8f;
 
-    float timer;
+    Timer fireTimer = new Timer();
 
     void Awake()
     {
@@ -36,12 +36,10 @@ public class Player : MonoBehaviour
         transform.up = newUp;
 
         // shoot when timer runs out
-        timer += Time.deltaTime;
-
-        if (timer >= fireInterval)
+        if (fireTimer.IsFinished())
         {
-            timer = 0f;
             Fire();
+            fireTimer.Start(fireInterval);
         }
     }
 
