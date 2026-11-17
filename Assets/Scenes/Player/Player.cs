@@ -9,13 +9,25 @@ public class Player : MonoBehaviour
     [Header("Firing")]
     public GameObject bulletPrefab;
     public float fireInterval = 0.5f;
+    private float originalFireInterval;
+    public float fireIntervalWhenBoosted = 0.25f;
+    public float speedBoostDuration = 2f;
     public float bulletSpeed = 8f;
 
     Timer fireTimer = new Timer();
+    Timer speedBoostTimer = new Timer();
+
+    SpriteRenderer sprite;
+
+    void Start()
+    {
+        originalFireInterval = fireInterval;
+    }
 
     void Awake()
     {
         if (cam == null) cam = Camera.main;
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     float GetAngleFromMouse()
@@ -35,11 +47,29 @@ public class Player : MonoBehaviour
 
         transform.up = newUp;
 
+        HandleSpeedBoostAbility();
+
         // shoot when timer runs out
         if (fireTimer.IsFinished())
         {
             Fire();
             fireTimer.Start(fireInterval);
+        }
+    }
+
+    void HandleSpeedBoostAbility()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            fireInterval = fireIntervalWhenBoosted;
+            speedBoostTimer.Start(speedBoostDuration);
+            sprite.color = Color.red;
+        }
+
+        if (speedBoostTimer.IsFinished())
+        {
+            fireInterval = originalFireInterval;
+            sprite.color = Color.white;
         }
     }
 
