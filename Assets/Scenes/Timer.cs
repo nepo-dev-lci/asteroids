@@ -8,7 +8,7 @@ public class Timer
 
 	public Timer() {}
 
-	public void Start(float duration)
+	public void Begin(float duration)
 	{
 		this.duration = duration;
 		startTime = Time.time;

@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
         if (fireTimer.IsFinished())
         {
             Fire();
-            fireTimer.Start(fireInterval);
+            fireTimer.Begin(fireInterval);
         }
     }
 
@@ -64,11 +64,11 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && speedBoostCooldownTimer.IsFinished())
         {
             fireInterval = fireIntervalWhenBoosted;
-            speedBoostTimer.Start(speedBoostDuration);
-            speedBoostCooldownTimer.Start(speedBoostCooldown);
+            speedBoostTimer.Begin(speedBoostDuration);
+            speedBoostCooldownTimer.Begin(speedBoostCooldown);
             sprite.color = Color.red;
             Fire();
-            fireTimer.Start(fireInterval);
+            fireTimer.Begin(fireInterval);
         }
 
         if (!speedBoostCooldownTimer.IsFinished())
