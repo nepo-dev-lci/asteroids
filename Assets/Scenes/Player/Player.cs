@@ -18,11 +18,14 @@ public class Player : MonoBehaviour
     Timer fireTimer = new Timer();
     Timer speedBoostTimer = new Timer();
     Timer speedBoostCooldownTimer = new Timer();
+    RadialProgressBar speedBoostProgressBar;
+    public GameObject speedBoostProgressObject;
 
     SpriteRenderer sprite;
 
     void Start()
     {
+        speedBoostProgressBar = new RadialProgressBar(speedBoostProgressObject);
         originalFireInterval = fireInterval;
     }
 
@@ -69,10 +72,12 @@ public class Player : MonoBehaviour
             sprite.color = Color.red;
             Fire();
             fireTimer.Begin(fireInterval);
+            speedBoostProgressBar.SetProgress(0f);
         }
 
         if (!speedBoostCooldownTimer.IsFinished())
         {
+            speedBoostProgressBar.SetProgress(speedBoostCooldownTimer.GetProgress());
             if (speedBoostTimer.IsFinished())
             {
                 fireInterval = originalFireInterval;
@@ -81,6 +86,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            speedBoostProgressBar.SetProgress(1f);
             sprite.color = Color.white;
         }
     }
