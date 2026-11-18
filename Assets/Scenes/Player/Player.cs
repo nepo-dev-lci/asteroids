@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -13,8 +14,18 @@ public class Player : MonoBehaviour
 
     float timer;
 
+    public float normalFireInterval = 0.5f;
+    public float rapidFireInterval = 0.15f;
+    private Timer rapidFireActiveTime = new Timer();
+    private Timer rapidFireCooldown = new Timer();
+    public GameObject rapidFireUI;
+    private RadialProgressBar rapidFireProgress;
+    private SpriteRenderer sprite;
+
     void Awake()
     {
+        sprite = GetComponent<SpriteRenderer>();
+        rapidFireProgress = new RadialProgressBar(rapidFireUI);
         if (cam == null) cam = Camera.main;
     }
 
@@ -37,6 +48,21 @@ public class Player : MonoBehaviour
 
         // shoot when timer runs out
         timer += Time.deltaTime;
+
+        if (rapidFireCooldown.IsFinished() && Input.GetKeyDown(KeyCode.Q))
+        {
+            rapidFireActiveTime.Begin(3f);
+            rapidFireCooldown.Begin(5f);
+            fireInterval = rapidFireInterval;
+            sprite.color = Color.coral;
+        }
+        rapidFireProgress.SetProgress(rapidFireCooldown.GetProgress());
+
+        if (rapidFireActiveTime.IsFinished())
+        {
+            fireInterval = normalFireInterval;
+            sprite.color = Color.white;
+        }
 
         if (timer >= fireInterval)
         {

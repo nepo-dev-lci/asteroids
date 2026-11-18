@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 2100000, guid: 4ce98cfa5409e455f97a358d191a2bdd, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -219,7 +219,7 @@ RectTransform:
   m_GameObject: {fileID: 125891506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.62871, y: 0.62871, z: 0.62871}
+  m_LocalScale: {x: 0.3530458, y: 0.3530458, z: 0.3530458}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1841460086}
@@ -228,7 +228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -462.93, y: -228}
+  m_AnchoredPosition: {x: -251, y: -122}
   m_SizeDelta: {x: 106.21854, y: 142.02994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &139410059
@@ -334,13 +334,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 524bbde15abe088d992847f3560d6528, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   cam: {fileID: 519420031}
   bulletPrefab: {fileID: 8659395044095693862, guid: 3f5c3af85fa6d104b82e13b72c27571f, type: 3}
   fireInterval: 0.5
   bulletSpeed: 8
-  progressBar: {fileID: 598514966}
+  rapidFireUI: {fileID: 598514966}
 --- !u!1 &337382977
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -515,8 +515,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_RenderShadows: 1
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 2100000, guid: 4ce98cfa5409e455f97a358d191a2bdd, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -717,8 +717,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_ComponentVersion: 4
   m_LightType: 4
   m_BlendStyleIndex: 0
@@ -819,7 +819,7 @@ RectTransform:
   m_GameObject: {fileID: 947836628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.62871, y: 0.62871, z: 0.62871}
+  m_LocalScale: {x: 0.3530458, y: 0.3530458, z: 0.3530458}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 337382978}
@@ -828,7 +828,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -360.29, y: -228}
+  m_AnchoredPosition: {x: -193.36, y: -122}
   m_SizeDelta: {x: 106.21854, y: 142.02994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1050922648
@@ -948,7 +948,7 @@ RectTransform:
   m_GameObject: {fileID: 1085127885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.62871, y: 0.62871, z: 0.62871}
+  m_LocalScale: {x: 0.3530458, y: 0.3530458, z: 0.3530458}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1144444970}
@@ -957,7 +957,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -263, y: -228}
+  m_AnchoredPosition: {x: -138.73001, y: -122}
   m_SizeDelta: {x: 106.21854, y: 142.02994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1144444969
@@ -1007,7 +1007,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1144,7 +1144,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1281,7 +1281,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 2100000, guid: 4ce98cfa5409e455f97a358d191a2bdd, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1351,7 +1351,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb23cc9a3734af9c3bea39af64c16479, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AsteroidSpawner
   prefab: {fileID: 6988882514645326309, guid: 204c44def257ce47b9e01940290cf00c, type: 3}
   spawnInterval: 0.5
